@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horas do Dia</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            position: relative;
+        }
+        h1{
+            text-align: center;
+            color: white;
+            font-size: 3em;
+            font-variant: small-caps;
+        }
+        .conteiner{
+            margin: auto;
+            width: 80vw;
+            background-color: white;
+            padding: 10px;
+            border-radius: 20px;
+            box-shadow: 3px 4px 5px black;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #horas{
+            margin-bottom: 30px;
+        }
+        img{
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Hora do Dia</h1>
+    <main class="conteiner">
+        <p id="horas"></p>
+        <div>
+            <img id="imagens" src="" alt="">  
+        </div>
+    </main>
+    <script>
+        var agora = new Date()
+        var hora = agora.getHours()
+        document.getElementById('horas').innerHTML = `Agora são ${hora} horas.`
+        if(hora <= 12){
+            document.getElementById('imagens').src = 'imagens/manha.jpg'
+            document.getElementsByTagName('body')[0].style.backgroundColor = "#627FF0";
+        } else if(hora <= 18){
+            document.getElementById('imagens').src = 'imagens/tarde.jpg'
+            document.getElementsByTagName('body')[0].style.backgroundColor = "#DE7F26";
+        } else{
+            document.getElementById('imagens').src = 'imagens/noite.jpg'
+            document.getElementsByTagName('body')[0].style.backgroundColor = "#4F4873";
+        }
+    </script>
+</body>
+</html>
