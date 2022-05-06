@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contagem</title>
+    <style>
+        body{
+            background-color: rgb(79, 152, 226);
+            
+            
+        }
+        h1{
+            text-align: center;
+            color: white;
+            font-variant: small-caps;
+            font-size: 3em;
+            text-shadow: 0px 2px 4px black;
+        }
+        .conteiner{
+            margin: auto;
+            max-width: 500px;
+            background-color: white;
+            padding: 15px;
+            font-size: 1.5em;
+            border-radius: 15px;
+            box-shadow: 0px 0px 10px black;
+
+        }
+        input[type="button"]{
+            font-size: 0.7em;
+            font-variant: small-caps;
+            box-shadow: 2px -2px 2px black;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>Vamos contar</h1>
+    <main class="conteiner">
+        <div class="corpo">
+            <p>Inicio: <input type="number" name="inic" id="inptIni"></p>
+            <p>Fim:    <input type="number" name="fim" id="inptFim"></p>
+            <p>Passo:  <input type="number" name="passo" id="inptPas"></p>
+
+            <input type="button" value="Contar" onclick="verificar()">
+        </div>
+        <div  id="result">
+        </div>
+        <script src="./script.js"></script>
+    </main>
+</body>
+</html>

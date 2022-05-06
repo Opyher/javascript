@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analisador de Números</title>
+    <style>
+        body{
+            background-color: rgb(226, 133, 51);
+            
+        }
+        h1{
+            text-align: center;
+            color: white;
+            font-variant: small-caps;
+            font-size: 3em;
+            text-shadow: 0px 2px 4px black;
+        }
+        .conteiner{
+            margin: auto;
+            max-width: 500px;
+            background-color: white;
+            padding: 15px;
+            font-size: 1.2em;
+            border-radius: 15px;
+            box-shadow: 0px 0px 10px black;
+            
+        }
+        input[type="button"]{
+            font-size: 0.7em;
+            font-variant: small-caps;
+            box-shadow: 2px -2px 2px black;
+
+        }
+        /*#result{
+            background-color: #6f69694b;
+            width: 150px;   
+            margin-top: 10px;
+            
+        } */ 
+        #select{
+            font-size: 0.7em;
+            width: 200px;
+            margin: 10px 0 10px 0;
+            background-color: rgba(128, 128, 128, 0.121);
+            outline: none;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Analisador de Números</h1>
+    <main class="conteiner">
+        <div class="corpo">
+            Número (Entre 1 e 100): 
+            <input type="number" name="inic" id="txtn">
+            <input type="button" value="Adicionar" onclick="adicionar()">
+            <select name="" id="select" size="10"></select>
+        </div>
+        <div  id="result">
+           
+        </div>
+        <input type="button" value="Finalizar" onclick="verificar()">
+        <script src="./script.js"></script>
+</body>
+</html>
